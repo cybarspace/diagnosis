@@ -1,14 +1,14 @@
 class foobar:
-    def __init__(self, collection) -> None:
+    def __init__(self, iterable):
         self.foo_dict = {}
-        for item in collection:
+        for item in iterable:
             self.addfoo(item)
 
     def __add__(self, other):
-        tempfoo = foobar(self)
+        tempbar = foobar(self)
         for item in other:
-            tempfoo.addfoo(item)
-        return tempfoo
+            tempbar.addfoo(item)
+        return tempbar
 
     def addfoo(self, item):
         join_index = len(self.foo_dict)
